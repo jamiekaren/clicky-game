@@ -1,24 +1,13 @@
 import React from "react";
-import "./style.css";
-import Images from "../images";
 
+// Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 function ImageCard(props) {
-
-const imageArray = [bird, bunny, dog,fox, hedgehog, horse, kangaroo, kitten, lemur, owl, racoon];
-
-let buildImages = array.map(imageArray => {
-  return <img key={image} src={require('.images/${image}.jpg')} className="img-responsive" id={image}>
-});
-
-  return (
-    <div className="card">
-      <div className="img-container" onClick={() => props.selectedImage(props.id)} className="selectedImage">
-       
-      {buildImages}
-
-
-      </div>
-
+  // Using the filter method, we can create a new array containing only groceries which haven't been purchased
+   return (
+    <div>
+      {props.images.map(item => (
+        <img alt={props.id} src={item.src}/>     
+      ))}
     </div>
   );
 }
