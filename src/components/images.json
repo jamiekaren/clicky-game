@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "/components/images/bird.jpg"
+    },
+    {
+        "id": 2,
+        "image": "/components/images/bunny.jpg"
+    },
+    {
+        "id": 3,
+        "image": "/components/images/dog.jpg"
+    },
+    {
+        "id": 4,
+        "image": "/components/images/fox.jpg"
+    },
+    {
+        "id": 5,
+        "image": "/components/images/hedgehog.jpg"
+    },
+    {
+        "id": 6,
+        "image": "/components/images/horse.jpg"
+    }
+]
