@@ -22,6 +22,12 @@ class ImageCard extends React {
     )
   };
 
+  // handleOnClick = () => {
+
+
+
+  // }
+
 
   render() {
     return (
