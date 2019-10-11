@@ -36,7 +36,7 @@ class ImageCard extends React {
     return (
       <Wrapper>
         
-
+      
         
       </Wrapper>
     );
