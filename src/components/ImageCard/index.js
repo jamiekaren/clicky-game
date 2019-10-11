@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import imagesData from "./components/images.json"
+import imagesData from "../images.json";
 import Wrapper from "../Wrapper/index.js";
 
-class ImageCard extends React {
+class ImageCard extends Component {
   state = {
     images: [],
     clicked: 0,

@@ -6,10 +6,7 @@ import Wrapper from "./components/Wrapper";
 
 function App() {
     return (
-        <Wrapper>
-            <h1>Clicky Game!</h1>
-           
-         </Wrapper>
+      <ImageCard/>
     );
 }
 
