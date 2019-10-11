@@ -6,6 +6,8 @@ class ImageCard extends React {
   state = {
     images: [],
     clicked: 0,
+    currentScore: 0,
+    highScore: 0
   };
 
   componentDidMount() {
@@ -14,6 +16,7 @@ class ImageCard extends React {
 
   createCards = () => {
     imagesData.map(image =>
+      
       <img
         alt=""
         src={image.src}
@@ -32,7 +35,7 @@ class ImageCard extends React {
   render() {
     return (
       <Wrapper>
-
+        
 
         
       </Wrapper>

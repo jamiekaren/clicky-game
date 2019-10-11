@@ -8,13 +8,8 @@ function App() {
     return (
         <Wrapper>
             <h1>Clicky Game!</h1>
-            {imagesData.map(image =>
-                <ImageCard
-                    src={image.src}
-                    id={image.id}
-                />
-            )}
-        </Wrapper>
+           
+         </Wrapper>
     );
 }
 
