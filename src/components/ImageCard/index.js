@@ -1,35 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+import "./ImageCard.css";
 
-class ImageCard extends Component {
-  // setting initial state
-  state = {
-    imageArray: ["bird", "bunny", "dog", "fox", "hedgehog"],
-    userChosen: ""
-  };
-
-createImage = () => {
-
-imageArray.map(item => (
-  <img alt="" src={item}/>
-
-))
-
-
-}
-
-
-render() {
+const ImageCard = props => {
   return (
-    <div>
-    
-
-
+    <div className="card">
+      <img
+        alt=""
+        src={props.src}
+        id={props.id}
+      />
     </div>
-
   );
 }
 
-
-}
 
 export default ImageCard;
