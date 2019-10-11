@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ImageCard from "./components/ImageCard";
+import imagesData from "./components/images.json"
+import Wrapper from "./components/Wrapper";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Wrapper>
+            <h1>Clicky Game!</h1>
+            {imagesData.map(image =>
+                <ImageCard
+                    src={image.src}
+                    id={image.id}
+                />
+            )}
+        </Wrapper>
+    );
 }
 
 export default App;
