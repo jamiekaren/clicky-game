@@ -1,16 +1,46 @@
-import React from "react";
-import "./ImageCard.css";
+import React, { Component } from "react";
+import imagesData from "../images.json";
+import Wrapper from "../Wrapper/index.js";
 
-const ImageCard = props => {
-  return (
-    <div className="card">
+class ImageCard extends Compo {
+  state = {
+    images: [],
+    clicked: 0,
+    currentScore: 0,
+    highScore: 0
+  };
+
+  componentDidMount() {
+    this.createCards();
+  }
+
+  createCards = () => {
+    imagesData.map(image =>
+      
       <img
         alt=""
-        src={props.src}
-        id={props.id}
+        src={image.src}
+        id={image.id}
       />
-    </div>
-  );
+    )
+  };
+
+  // handleOnClick = () => {
+
+
+
+  // }
+
+
+  render() {
+    return (
+      <Wrapper>
+        
+      
+        
+      </Wrapper>
+    );
+  }
 }
 
 
