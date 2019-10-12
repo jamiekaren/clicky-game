@@ -21,6 +21,7 @@ class CardContainer extends Component {
 //Loop through JSON data here and create a new array to set the state of **this** component?
 //But we def can't do that, because we'd be looping every time, we only want to get JSON once?
 
+//Well, this is def sending JSOn to my array, but what to do with that lol?
 
   loopImages = () => {
     imagesData.map(image =>
@@ -37,7 +38,7 @@ class CardContainer extends Component {
       <Wrapper>
         <h1>Clicky Game!</h1>
         {imagesData.map(image =>
-          //Runs my CreateCard "stupid" function, which is pulling in my JSON data to create my images
+          //Runs my CreateCard "stupid" function, but is inserting the src from my array... but one many times
           <Cards
             src={this.state.imagesArray.src}
           />
