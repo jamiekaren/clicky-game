@@ -1,19 +1,17 @@
 import React from "react";
-
-
-
+import "./ImageCard.css";
 
 const CreateCard = props => {
- <Wrapper>
- <h1>Clicky Game!</h1>
- {imagesData.map(image =>
-     <ImageCard
-         src={image.src}
-         id={image.id}
-     />
- )}
-</Wrapper>
-);
+
+    return (
+        <div className="card">
+            <img
+                alt={props.name}
+                src={props.src}
+                id={props.id}
+            />
+        </div>
+    );
 }
 
-export default ImageCard;
+export default CreateCard;
