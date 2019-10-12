@@ -23,7 +23,7 @@ class CardContainer extends Component {
 
 
   loopImages = () => {
-    imagesData.filter(image =>
+    imagesData.map(image =>
       this.setState({
         imagesArray: image
       })
@@ -39,7 +39,7 @@ class CardContainer extends Component {
         {imagesData.map(image =>
           //Runs my CreateCard "stupid" function, which is pulling in my JSON data to create my images
           <Cards
-            src={this.state.imagesArray}
+            src={this.state.imagesArray.src}
           />
         )}
       </Wrapper>
