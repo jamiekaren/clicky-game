@@ -5,7 +5,7 @@ import Wrapper from "../Wrapper";
 
 class CardContainer extends Component {
   state = {
-    images: [],
+    imagesArray: [],
     clicked: 0,
     currentScore: 0,
     highScore: 0
@@ -15,6 +15,11 @@ class CardContainer extends Component {
   //   this.createCards();
   // }
 
+  loopImages = () => {
+    imagesData.filter(image => 
+      this.setState({imagesArray: image} )
+      )
+  }
 
 
   render() {
@@ -23,8 +28,7 @@ class CardContainer extends Component {
         <h1>Clicky Game!</h1>
         {imagesData.map(image =>
           <Cards
-            src={image.src}
-            id={image.id}
+            src={this.state.imagesArray}
           />
         )}
       </Wrapper>
