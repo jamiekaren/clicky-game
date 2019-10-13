@@ -6,8 +6,8 @@ const CreateCard = props => {
     return (
         <div className="card">
             <img
-                width="200"
-                height="150"
+                width="250"
+                height="200"
                 alt={props.name}
                 src={props.src}
                 id={props.id}
