@@ -6,18 +6,12 @@ import Wrapper from "../Wrapper";
 
 class CardContainer extends Component {
   state = {
-    imagesArray: [],
     clicked: 0,
     currentScore: 0,
     highScore: 0
   };
 
 
-
-
-  // shuffleImages = () => {
-
-  // }
 
   // I know that I can loop through my Card here to get my images if I pull from my JSON file
   // But I want to render it from STATE, not JSON... how??
@@ -34,8 +28,6 @@ class CardContainer extends Component {
             id={image.id}
           />
         )}
-
-
    
       </Wrapper>
     );
