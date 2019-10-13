@@ -31,6 +31,7 @@ class CardContainer extends Component {
             alt=""
             key={image.id}
             src={image.src}
+            id={image.id}
           />
         )}
 
