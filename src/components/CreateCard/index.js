@@ -1,20 +1,27 @@
 import React from "react";
 import "./ImageCard.css";
 
-const CreateCard = props => {
-
-   
-    return (
-        <div className="card">
-            <img
-                width="250"
-                height="200"
-                alt={props.name}
-                src={props.src}
-                id={props.id}
-            />
-        </div>
-    );
+class Cards extends Component {
+    
+    onImageClick(image) {
+        this.props.onCardClick(image)
+    }
+    
+    render() {
+        return (
+            <div className="card">
+                <img
+                    width="250"
+                    height="200"
+                    alt={this.props.name}
+                    src={this.props.src}
+                    id={this.props.id}
+                    onClick={(e) => this.onImageClick(this.props.image)}
+                />
+            </div>
+        );
+    }
 }
 
-export default CreateCard;
+
+export default Cards;
