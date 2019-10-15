@@ -28,9 +28,12 @@ class CardContainer extends Component {
       alert(`Image ${image.id} was already clicked, game over!`);
 
       console.log(image);
-      this.setState({ highScore: this.state.currentScore });
-      this.setState({ currentScore: 0 });
-      image.clicked = false;
+
+      if (this.state.currentScore > this.state.highScore) {
+        this.setState({ highScore: this.state.currentScore });
+        this.setState({ currentScore: 0 });
+      } else
+        this.setState({ currentScore: 0 });
 
       let clearClicksData = [...this.state.imagesData];
 
