@@ -3,7 +3,7 @@ import Cards from "../CreateCard";
 import imagesData from "../images.json";
 import Wrapper from "../Wrapper";
 
-// before we make our component, we set a variable to clone our object which we call in state
+// before we make our component, we set a variable to clone our object which we call in state running our data through
 const clone = (x) => Object.assign({}, x);
 
 class CardContainer extends Component {
@@ -11,6 +11,7 @@ class CardContainer extends Component {
     clicked: 0,
     currentScore: 0,
     highScore: 0,
+    // map through our JSON file currently using our clone object variable, so saving it here instead of in JSON
     imagesData: imagesData.map(clone)
   };
 
@@ -30,7 +31,8 @@ class CardContainer extends Component {
       image.clicked = true;
     }
 
-    //we create a completely new array and set it as our state, using that fancy new array thing Andrew showed us lol
+    //we create a completely new array from our state, using that fancy new array thing Andrew showed us lol
+    // then we reverse it before sending it back to state 
     let newImagesData = [...this.state.imagesData];
     //then we can actually reverse our array which is so cool and set it to state
     //but really we need this to change more differently so have to work on that, but at least this is showing it can change
@@ -39,12 +41,11 @@ class CardContainer extends Component {
   }
 
 
-
   render() {
     return (
       <Wrapper>
         <h1>Clicky Game!</h1>
-
+        {/* We map through our current state data */}
         {this.state.imagesData.map(image =>
           <Cards
             alt=""
