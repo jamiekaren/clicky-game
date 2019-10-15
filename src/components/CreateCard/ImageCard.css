@@ -33,3 +33,7 @@
 .card > .content > ul > li {
   margin-top: 18px;
 }
+
+img:hover {
+  cursor: pointer;
+}

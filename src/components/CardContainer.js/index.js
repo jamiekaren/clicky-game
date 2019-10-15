@@ -14,9 +14,9 @@ class CardContainer extends Component {
     imagesData: imagesData.map(clone)
   };
 
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   //we got this event from our createcards
   onCardClick(image) {
@@ -30,7 +30,7 @@ class CardContainer extends Component {
       image.clicked = true;
     }
 
-    //we create a completely new array and set it as our state
+    //we create a completely new array and set it as our state, using that fancy new array thing Andrew showed us lol
     let newImagesData = [...this.state.imagesData];
     //then we can actually reverse our array which is so cool and set it to state
     //but really we need this to change more differently so have to work on that, but at least this is showing it can change
@@ -55,8 +55,6 @@ class CardContainer extends Component {
             onCardClick={(image) => this.onCardClick(image)}
           />
         )}
-
-
 
       </Wrapper>
     );
