@@ -11,9 +11,17 @@ class CardContainer extends Component {
     highScore: 0
   };
 
-  handleClick = (e) => {
-    console.log(e.target);
-    
+  onCardClick(image) {
+    if (image.clicked) {
+      alert(`Image ${image.id} was already clicked`);
+    } else {
+      alert(`First time image ${image.id} was clicked`);
+      image.clicked = true;
+    }
+
+    let newImagesData = [...this.state.imagesData];
+    newImagesData.reverse()
+    this.setState({ imagesData: newImagesData })
   }
 
 
@@ -24,54 +32,18 @@ class CardContainer extends Component {
       <Wrapper>
         <h1>Clicky Game!</h1>
 
+        {this.state.imagesData.map(image =>
+          <Cards
+            alt=""
+            key={image.id}
+            src={image.src}
+            id={image.id}
+            image={image}
+            onCardClick={(image) => this.onCardClick(image)}
+          />
+        )}
 
-        <div className="card">
-          <img
-            width="250"
-            height="200"
-            alt={imagesData[0].name}
-            src={imagesData[0].src}
-            id={imagesData[0].id}
-            onClick={this.handleClick()}
-          />
-        </div>
-        <div className="card">
-          <img
-            width="250"
-            height="200"
-            alt={imagesData[1].name}
-            src={imagesData[1].src}
-            id={imagesData[1].id}
-          />
-        </div>
-        <div className="card">
-          <img
-            width="250"
-            height="200"
-            alt={imagesData[2].name}
-            src={imagesData[2].src}
-            id={imagesData[2].id}
-          />
-        </div>
-        <div className="card">
-          <img
-            width="250"
-            height="200"
-            alt={imagesData[3].name}
-            src={imagesData[3].src}
-            id={imagesData[3].id}
-          />
-        </div>
-        <div className="card">
-          <img
-            width="250"
-            height="200"
-            alt={imagesData[4].name}
-            src={imagesData[4].src}
-            id={imagesData[4].id}
-          />
-        </div>
-      
+
 
       </Wrapper>
     );
