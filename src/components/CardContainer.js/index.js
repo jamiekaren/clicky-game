@@ -56,8 +56,6 @@ class CardContainer extends Component {
           />
         )}
 
-
-
       </Wrapper>
     );
   }
