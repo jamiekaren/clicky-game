@@ -24,11 +24,14 @@ class CardContainer extends Component {
     //if statement to see what was clicked, we set a boolean
     //if image was already clicked, we currently are just alerting with the image id saying it was clicked already
     if (image.clicked) {
-      alert(`Image ${image.id} was already clicked`);
+      alert(`Image ${image.id} was already clicked, game over!`);
+      this.setState({ highScore: this.state.currentScore });
+      this.setState({ currentScore: 0 });
     } else {
       //else if it was not true, we are saying this is the first time clicked and setting it to true
-      alert(`First time image ${image.id} was clicked`);
+      alert(`First time image ${image.id} was clicked, nice!`);
       image.clicked = true;
+      this.setState({ currentScore: this.state.currentScore + 1 })
     }
 
     //we create a completely new array from our state, using that fancy new array thing Andrew showed us lol
@@ -45,6 +48,10 @@ class CardContainer extends Component {
     return (
       <Wrapper>
         <h1>Clicky Game!</h1>
+        <p>
+          <h2>High Score: {this.state.highScore}</h2>
+          <h2>Current Score: {this.state.currentScore}</h2>
+        </p>
         {/* We map through our current state data */}
         {this.state.imagesData.map(image =>
           <Cards
