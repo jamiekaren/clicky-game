@@ -39,7 +39,12 @@ class CardContainer extends Component {
     let newImagesData = [...this.state.imagesData];
     //then we can actually reverse our array which is so cool and set it to state
     //but really we need this to change more differently so have to work on that, but at least this is showing it can change
-    newImagesData.reverse()
+    // newImagesData.reverse()
+
+    newImagesData.sort(() => Math.random() - 0.5);
+
+
+
     this.setState({ imagesData: newImagesData })
   }
 
